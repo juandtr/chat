@@ -1,7 +1,13 @@
-body{
-  background: #76b852;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+:root {
+  --color-primary: #141414;
+  --color-secondary: rgb(33, 34, 33);
+  --color-tertiary: #61dafb;
+}
+
+body {
+  background: var(--color-primary);
+  background: -webkit-linear-gradient(to left, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
 }
 
 .App {
@@ -9,19 +15,20 @@ body{
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--color-tertiary);
 }
 
 .container {
-  width: 60%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-#content-chat{
+#content-chat {
   height: 550px;
   overflow-y: scroll;
 }
 
-#nickname{
+#nickname {
   width: 12em;
 }
 
@@ -30,4 +37,3 @@ body{
     width: 100%;
   }
 }
-
